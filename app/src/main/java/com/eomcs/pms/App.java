@@ -1,14 +1,40 @@
 package com.eomcs.pms;
+import java.util.Date;
+import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) {
-    System.out.println("[작업]");
-    System.out.println("프로젝트: 미니 프로젝트 관리 시스템 개발");
-    System.out.println("번호: 1");
-    System.out.println("내용: 요구사항 수집");
-    System.out.println("완료일: 2020-01-20");
-    System.out.println("상태: 진행중");
-    System.out.println("담당자: 홍길동");
+    java.io.InputStream keybord = System.in;
+    Scanner keyScan= new Scanner(keybord);
+    Date day = new Date();
+
+    System.out.print("번호? ");
+    String number = keyScan.nextLine();
+
+    System.out.print("이름? ");
+    String name = keyScan.nextLine();
+
+    System.out.print("이메일? ");
+    String eMail = keyScan.nextLine();
+
+    System.out.print("암호? ");
+    String passWord = keyScan.nextLine();
+
+    System.out.print("사진? ");
+    String picture = keyScan.nextLine();
+
+    System.out.print("전화? ");
+    String callNumber = keyScan.nextLine();
+
+
+    System.out.println("----------------------------");
+    System.out.printf("번호: %s\n이름: %s\n이메일: %s\n암호: %s\n사진: %s\n전화: %s\n",number, name, eMail, passWord, picture, callNumber);
+    System.out.printf("가입일: %1$tY-%1$tM-%1$td", day);
+
+    keyScan.close();
 
   }
 }
+/*
+
+ */
