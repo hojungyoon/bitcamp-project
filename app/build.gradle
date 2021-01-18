@@ -5,6 +5,12 @@ plugins {
     id 'java'
 }
 
+eclipse{
+    project {
+        name = "bitcamp-project"
+    }
+}
+
 repositories {
     jcenter()
 }
