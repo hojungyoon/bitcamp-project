@@ -184,8 +184,7 @@ public class App {
 
   static <T extends Serializable> void saveObjects(File file, List<T> dataList) {
     try (ObjectOutputStream out = new ObjectOutputStream(
-        new BufferedOutputStream(
-            new FileOutputStream(file)))) {
+        new BufferedOutputStream(new FileOutputStream(file)))) {
 
       out.writeObject(dataList);
       System.out.printf("파일 %s 저장!\n", file.getName());
@@ -194,6 +193,5 @@ public class App {
       System.out.printf("파일 %s 저장 중 오류 발생!", file.getName());
     }
   }
-
 
 }
